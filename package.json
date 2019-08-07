@@ -1,0 +1,25 @@
+{
+  "name": "bit_wallet_bot",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "git pull origin HEAD && npm i && npm run restart",
+    "restart": "lsc -c index.ls && pm2 restart index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "get-hrefs": "^4.0.0",
+    "livescript": "^1.6.0",
+    "md5": "^2.2.1",
+    "moment": "^2.24.0",
+    "prelude-ls": "^1.1.2",
+    "read-write-google-spreadsheet": "^1.0.3",
+    "require-ls": "0.0.8",
+    "shelljs": "^0.8.3",
+    "superagent": "^5.1.0",
+    "tanos": "latest"
+  }
+}
