@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "update": "git pull origin HEAD && npm i && npm run restart",
-    "restart": "lsc -c index.ls && pm2 restart index.js"
+    "setup" : "npm i livescript -g && npm i",
+    "start": "lsc index.ls",
+    "update": "git pull origin HEAD && npm i && npm run restart"
   },
   "author": "",
   "license": "ISC",
