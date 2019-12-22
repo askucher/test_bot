@@ -1,11 +1,23 @@
 module.exports =
     "main:bot-step" :
         text: "Pizza bot"
-        buttons: 
-            "Start" : "goto:start"
+        menu: 
+            "Start" : 
+                goto: "start"
+                maxwidth: yes
+            "Start2" : 
+                goto: "start"
+                maxwidth: yes
+            "Start3" : 
+                goto: "start"
+                maxwidth: yes
+            "Start4" : 
+                goto: "start"
+            "Start5" : 
+                goto: "start"
     "start:bot-step":
         text: "Please choose the pizza" 
-        buttons: 
+        menu: 
             "Havayan" : 
                 goto: "havayan"
                 store: "$user.chosenPizza = 'havayan'"
@@ -25,7 +37,7 @@ module.exports =
         text: "You have chosen {{$user.chosenPizza}}"
     "payment:bot-step" :
         text: "Your order is {{$user.chosenPizza}} with size {{$user.size}}"
-        buttons:
+        menu:
             "Process payment" :
                     "goto" : "processing"
                     "store": "({ $user, $app }, cb)-> $app.execureOrder $user, cb"
